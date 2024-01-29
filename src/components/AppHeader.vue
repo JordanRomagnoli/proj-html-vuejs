@@ -36,7 +36,7 @@ export default {
                         <li>
                             <a href="">
                                 Pages
-                                <i class="fa-solid fa-angle-down fw-light text-lowercase" style="color: #c3c6d1;"></i>
+                                <i class="fa-solid fa-angle-down" style="color: black;"></i>
                             </a>
                         </li>
 
@@ -61,7 +61,7 @@ export default {
                         <li>
                             <a href="">
                                 Shop
-                                <span class="fw-light text-lowercase">v</span>
+                                <i class="fa-solid fa-angle-down" style="color: black;"></i>
                             </a>
                         </li>
                     </ul>
@@ -71,31 +71,31 @@ export default {
             <div class="box-links d-flex justify-content-end">
                 <div class="border-end border-dark">
                     <a href="">
-                        search
+                        <i class="fa-solid fa-magnifying-glass" style="color: black;"></i>
                     </a>
                 </div>
 
                 <div>
                     <a href="">
-                        f
+                        <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
                     </a>
                 </div>
 
                 <div>
                     <a href="">
-                        t
+                        <i class="fa-brands fa-twitter" style="color: #000000;"></i>
                     </a>
                 </div>
 
                 <div>
                     <a href="">
-                        y
+                        <i class="fa-brands fa-youtube" style="color: #000000;"></i>
                     </a>
                 </div>
 
                 <div>
                     <a href="">
-                        i
+                        <i class="fa-brands fa-instagram" style="color: #000000;"></i>
                     </a>
                 </div>
             </div>

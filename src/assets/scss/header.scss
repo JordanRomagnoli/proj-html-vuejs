@@ -1,8 +1,7 @@
 header {
     width: 100%;
     position: fixed;
-    // debug
-    background-color: lightcoral;
+    background-color: white;
 
     .container-header {
         width: 100%;
@@ -16,8 +15,6 @@ header {
         }
 
         .box-main-nav {
-
-
             ul {
                 li {
                     padding-top: 15px;
@@ -38,11 +35,7 @@ header {
         }
 
         .box-links {
-
             >* {
-
-                margin-right: 8px;
-
                 &:last-child {
                     margin-right: 0;
                 }
