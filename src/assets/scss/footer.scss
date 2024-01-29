@@ -1,0 +1,29 @@
+.container-80 {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+/**********************************************************/
+
+footer {
+    background-color: #111111;
+    color: lightgrey;
+
+
+    .container-80 {
+        margin: 0 auto;
+
+        .footer-top {
+            padding: 100px 0;
+
+            .col-footer {
+                width: 25%;
+                padding: 40px;
+            }
+        }
+    }
+}
