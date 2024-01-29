@@ -10,6 +10,7 @@
 
 <template>
     <router-view></router-view>
+    ciao Claudio
 </template>
 
 <style lang="scss" scoped>
