@@ -9,9 +9,9 @@
     </script>
 
 <template>
-    <h1>
-        HOME
-    </h1>
+    <div class="jumbotron">
+        
+    </div>
 </template>
 
 <style lang="scss" scoped>
