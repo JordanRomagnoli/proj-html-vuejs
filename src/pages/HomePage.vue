@@ -1,17 +1,21 @@
 <script>
+    import JumbotronCarusell from '../components/JumbotronCarusell.vue';
+
     export default {
         data() {
             return { 
                 
             }
         },
+        components :{
+
+            JumbotronCarusell,
+        }
     }
     </script>
 
 <template>
-    <div class="jumbotron">
-        
-    </div>
+    <JumbotronCarusell/>
 </template>
 
 <style lang="scss" scoped>
