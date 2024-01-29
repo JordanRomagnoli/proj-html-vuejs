@@ -52,7 +52,7 @@
 
 <template>
     <JumbotronCarusell/>
-    <section>
+    <section class="our-work">
         <div class="container text-center">
             <h6>
                 pelicula studio
@@ -70,14 +70,38 @@
             </div>
         </div>
     </section>
+
+    <section class="about-us">
+        <div>
+            <div class="container">
+                <div class="row g-0 ">
+                    <div class="col-6">
+                        <h3>
+                            about us
+                        </h3>
+
+                        <h2>
+                            high quality cinematics
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellendus delectus tempore facere hic. Enim incidunt commodi maiores quod pariatur corporis, ducimus sequi, facere excepturi temporibus hic perferendis illum aut?
+                        </p>
+                        
+                        <a>read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <style lang="scss" scoped>
-   section{
+   .our-work{
     padding: 40px 0;
-    min-height: 500px;
     margin-top: 40px;
-
+    
     .container{
         h6,h2{
             text-transform: uppercase;
@@ -94,4 +118,60 @@
         }
     }
    }
+
+   .about-us{
+    background-color: #0a1010;
+    background-image: url(../assets/img/About-Us.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+        > div{
+        
+        .row{
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 500px;
+                .col-6{
+                    color: white;
+
+                    >h3,h2,a{
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                    }
+
+                    > h3{
+                        font-size: 0.8rem;
+                    }
+                    > h2{
+                        font-size: 2.2rem;
+                        font-weight: bold;
+                    }
+                    >p{
+                        line-height: 40px;
+                        font-weight: 500;
+                        margin-bottom: 40px;
+
+                    }
+
+                    > a{
+                        background-color: white;
+                        cursor: pointer;
+                        color: black;
+                        padding: 10px 40px;
+                        font-size: 0.8rem;
+                        border: none;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: all .2s ease-in-out;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                            border: 1px solid white;
+                        }
+                    }
+                }
+        }
+    }
+   }
+   
 </style>

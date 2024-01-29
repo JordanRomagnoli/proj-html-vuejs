@@ -78,6 +78,7 @@
     .jumbotron{
         background-size: cover;
         background-position: center;
+        transition: all .6s ease-in;
 
         > div{
             background-color: rgba(0, 0, 0, 0.5);
