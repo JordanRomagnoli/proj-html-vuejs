@@ -1,10 +1,34 @@
 <script>
+import { store } from '../store';
+
 export default {
     data() {
         return {
-
+            store,
+            listWatchedInAbout: [
+                {
+                    img: 'Gallery-01.jpg',
+                    title: 'seventeenth summer',
+                    subtitle: 'Commercial, Music Video'
+                },
+                {
+                    img: 'Gallery-02.jpg',
+                    title: 'a message to space',
+                    subtitle: 'Short Film'
+                },
+                {
+                    img: 'Gallery-03.jpg',
+                    title: 'the most beautifull thing',
+                    subtitle: 'Music Video'
+                }
+            ]
         }
     },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 }
 </script>
 
@@ -23,6 +47,38 @@ export default {
 
                 <span>About</span>
             </div>
+        </section>
+
+        <section class="watchlist">
+            <div class="text-center mb-3">
+                <h6>
+                    YOUR WATCHLIST
+                </h6>
+
+                <h2>
+                    BEST HITS MOVIES
+                </h2>
+            </div>
+
+            <div class="container d-flex">
+
+                <div class="one-card p-3" v-for="(elem, i) in listWatchedInAbout">
+                    <div class="card-img">
+                        <img class="w-100" :src="getImagePath('../assets/img/' + (elem.img))">
+                    </div>
+
+                    <h5 class="text-center my-3 text-uppercase">
+                        {{ elem.title }}
+                    </h5>
+
+                    <h6 class="text-body-secondary text-center">
+                        {{ elem.subtitle }}
+                    </h6>
+                </div>
+
+            </div>
+
+
         </section>
 
     </div>
@@ -50,6 +106,32 @@ export default {
         .return-home_page {
             font-size: 15px;
         }
+    }
+
+    .watchlist {
+        padding: 80px 0;
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .one-card {
+            width: calc(100% / 3);
+
+            .card-img {
+                overflow: hidden;
+
+                img {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
     }
 }
 </style>

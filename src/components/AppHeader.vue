@@ -2,7 +2,15 @@
 export default {
     data() {
         return {
-
+            headerItems: [
+                'home',
+                'blogs',
+                'pages',
+                'about',
+                'contacts',
+                'gallery',
+                'shop'
+            ]
         }
     },
 }
@@ -21,48 +29,13 @@ export default {
             <div class="box-main-nav">
                 <nav>
                     <ul class="list-unstyled d-flex align-items-center">
-                        <li>
-                            <router-link :to="{ name: 'home' }">
-                                Home
-                            </router-link>
-                        </li>
+                        <li v-for="(elem, i) in headerItems" class="text-uppercase">
 
-                        <li>
-                            <a href="">
-                                Blogs
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Pages
+                            <router-link :to="elem">
+                                {{ elem }}
                                 <i class="fa-solid fa-angle-down" style="color: black;"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <router-link :to="{ name: 'about' }">
-                                About
                             </router-link>
-                        </li>
 
-                        <li>
-                            <a href="">
-                                Contacts
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Gallery
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Shop
-                                <i class="fa-solid fa-angle-down" style="color: black;"></i>
-                            </a>
                         </li>
                     </ul>
                 </nav>
