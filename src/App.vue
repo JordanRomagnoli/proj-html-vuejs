@@ -11,10 +11,10 @@ import { store } from './store';
 
 export default {
     data() {
-        return { 
-            
+        return {
+
             store
-            
+
         }
     },
     /*
@@ -31,20 +31,20 @@ export default {
 
 <template>
     <div>
-        
+
         <header>
-            <AppHeader/>
+            <AppHeader />
         </header>
         <main>
-            <AppMain/>
+            <AppMain />
         </main>
         <footer>
-            <AppFooter/>
+            <AppFooter />
         </footer>
-        
+
     </div>
 </template>
 
 <style lang="scss">
-    @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 </style>

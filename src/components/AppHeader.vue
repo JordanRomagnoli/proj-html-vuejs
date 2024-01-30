@@ -13,18 +13,18 @@ export default {
         <div class="container-header d-flex justify-content-between align-items-center ">
 
             <div class="box-img">
-                <a href="">
+                <router-link :to="{ name: 'home' }">
                     <img src="../assets/img/logo.svg" alt="">
-                </a>
+                </router-link>
             </div>
 
             <div class="box-main-nav">
                 <nav>
                     <ul class="list-unstyled d-flex align-items-center">
                         <li>
-                            <a href="">
-                                home
-                            </a>
+                            <router-link :to="{ name: 'home' }">
+                                Home
+                            </router-link>
                         </li>
 
                         <li>
@@ -41,9 +41,9 @@ export default {
                         </li>
 
                         <li>
-                            <a href="">
+                            <router-link :to="{ name: 'about' }">
                                 About
-                            </a>
+                            </router-link>
                         </li>
 
                         <li>
