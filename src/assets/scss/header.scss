@@ -20,10 +20,43 @@ header {
                 li {
                     padding-top: 15px;
 
+                    .dropdown-pages,
+                    .dropdown-shop {
+                        display: none;
+                        position: absolute;
+                        top: 95px;
+                        background-color: black;
+
+                        .shop-links {
+                            position: relative;
+                        }
+
+                        .shop-links:hover .dropright {
+                            display: block;
+                        }
+
+                        .dropright {
+                            display: none;
+                            position: absolute;
+                            left: 100%;
+                            background-color: black;
+
+                            >* {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3):hover .dropdown-pages,
+                    &:nth-child(7):hover .dropdown-shop {
+                        display: block;
+                    }
+
                     a {
                         text-decoration: none;
                         padding-left: 20px;
                         padding-right: 20px;
+                        padding-bottom: 40px;
                         text-transform: uppercase;
                         color: black;
                         font-size: 15px;
