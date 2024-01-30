@@ -10,7 +10,37 @@ export default {
                 'contacts',
                 'gallery',
                 'shop'
-            ]
+            ],
+            headerItems: [
+                {
+                    path: "/",
+                    namePath: 'home'
+                },
+                {
+                    path: "/blogs",
+                    namePath: 'blogs'
+                },
+                {
+                    path: "/pages",
+                    namePath: 'pages'
+                },
+                {
+                    path: "/about",
+                    namePath: 'about'
+                },
+                {
+                    path: "/contacts",
+                    namePath: 'contacts'
+                },
+                {
+                    path: "/gallery",
+                    namePath: 'gallery'
+                },
+                {
+                    path: "/shop",
+                    namePath: 'shop'
+                },
+            ],
         }
     },
 }
@@ -31,8 +61,8 @@ export default {
                     <ul class="list-unstyled d-flex align-items-center">
                         <li v-for="(elem, i) in headerItems" class="text-uppercase">
 
-                            <router-link :to="elem">
-                                {{ elem }}
+                            <router-link :to="elem.path">
+                                {{ elem.namePath }}
                                 <i class="fa-solid fa-angle-down" style="color: black;"></i>
                             </router-link>
 
