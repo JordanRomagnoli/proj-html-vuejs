@@ -5,6 +5,7 @@
     import SingleWork from '../components/SingleWork.vue';
     import Statics from '../components/Statics.vue';
     import SingleTeam from '../components/SingleTeam.vue';
+    import Quotes from '../components/Quotes.vue';
 
     export default {
         data() {
@@ -74,6 +75,7 @@
             SingleWatched,
             Statics,
             SingleTeam,
+            Quotes,
         },
         methods: {
             
@@ -168,6 +170,10 @@
                 />
             </div>
         </div>
+    </section>
+
+    <section>
+        <Quotes/>
     </section>
 
 </template>
