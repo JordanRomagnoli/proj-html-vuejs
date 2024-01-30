@@ -3,6 +3,7 @@
     import JumbotronCarusell from '../components/JumbotronCarusell.vue';
     import SingleWatched from '../components/SingleWatched.vue';
     import SingleWork from '../components/SingleWork.vue';
+    import Statics from '../components/Statics.vue';
 
     export default {
         data() {
@@ -40,6 +41,11 @@
                         description: 'Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.'
                     },
                 ],
+                listTeam:[
+                    {
+
+                    }
+                ]
                 
             }
         },
@@ -48,6 +54,7 @@
             JumbotronCarusell,
             SingleWork,
             SingleWatched,
+            Statics,
         },
         methods: {
             
@@ -116,6 +123,14 @@
                 :Subtitle="elem.subtitle"/>
             </div>
         </div>
+    </section>
+
+    <section>
+        <Statics/>
+    </section>
+
+    <section>
+        
     </section>
 
 </template>

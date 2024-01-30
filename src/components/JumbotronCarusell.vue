@@ -49,12 +49,15 @@
         'active-2': counterJumbotron == 1,
     }">
        <div>
-            <button @click="prevButton()">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
+            
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-1">
+                        <button @click="prevButton()">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="col-10">
                         <h5>
                             {{ jumbotronCarousellElement[counterJumbotron].smallTitle }}
                         </h5>
@@ -63,11 +66,13 @@
                         </h1>
                         <a href="#nogo">read more</a>
                     </div>
+                    <div class="col-1">
+                        <button @click="nextButton()">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <button @click="nextButton()">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
        </div> 
     </div>
 </template>
@@ -88,20 +93,22 @@
             min-height: 782px;
             padding: 20px;
 
-
-                > button{
-                width: 50px;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.5);
-                border: none;
-                color: white;
-                }
                 .container{
                     color: white;
                     .row{
                         padding: 0 20px;
-                        
-                        .col-6{
+                        .col-1{
+                            display: flex;
+                            align-items: center;
+                            > button{
+                                width: 50px;
+                                height: 50px;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                border: none;
+                                color: white;
+                            }
+                        }
+                        .col-10{
                             h1,h5,a{
                                 text-transform: uppercase;
                             }
