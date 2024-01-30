@@ -81,6 +81,33 @@ export default {
 
         </section>
 
+        <section class="about-us">
+            <div class="container">
+
+                <div>
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        about us
+                    </h6>
+
+                    <h2 class="text-uppercase fw-bold mb-4">
+                        high quality cinematics
+                    </h2>
+
+                    <p class="mb-5">
+                        Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus mus. Nulla
+                        A nisi ut mi efficitur hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus
+                        sem sed. phasellus sed eli molestie, porttitor ligula of the egestas, mattis augue. quisque et
+                        rhoncus justo. suspendisse luctus pharetra eleme tcondimentum.
+                    </p>
+
+                    <button type="button" class="text-uppercase py-3 px-5 fs-5 bg-light">
+                        read more
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 </template>
 
@@ -132,6 +159,37 @@ export default {
             }
         }
 
+    }
+
+    .about-us {
+        background-image: url('../assets/img/About-Us.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            color: white;
+
+            div:first-of-type {
+                width: 50%;
+                margin-left: auto;
+
+                p {
+                    line-height: 35px;
+                }
+
+                button {
+                    transition: color 0.5s;
+                    color: white;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+        }
     }
 }
 </style>
