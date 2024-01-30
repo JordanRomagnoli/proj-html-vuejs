@@ -4,6 +4,7 @@
     import SingleWatched from '../components/SingleWatched.vue';
     import SingleWork from '../components/SingleWork.vue';
     import Statics from '../components/Statics.vue';
+    import SingleTeam from '../components/SingleTeam.vue';
 
     export default {
         data() {
@@ -43,8 +44,25 @@
                 ],
                 listTeam:[
                     {
-
-                    }
+                        img:'Team-01.jpg',
+                        title: 'fabricio guerra',
+                        subtitle: 'Main Director',
+                    },
+                    {
+                        img:'Team-02.jpg',
+                        title: 'umberto pagoda',
+                        subtitle: 'Main Writer',
+                    },
+                    {
+                        img:'Team-03.jpg',
+                        title: 'gloria riccasso',
+                        subtitle: 'Main Producer',
+                    },
+                    {
+                        img:'Team-04.jpg',
+                        title: 'lio napoin',
+                        subtitle: 'Cameraman',
+                    },
                 ]
                 
             }
@@ -55,6 +73,7 @@
             SingleWork,
             SingleWatched,
             Statics,
+            SingleTeam,
         },
         methods: {
             
@@ -75,6 +94,7 @@
             <div class="row flex-wrap">
                 <SingleWork
                 v-for="(elem, i) in listWork"
+                :key="i"
                 :Image="elem.img"
                 :Title="elem.title"
                 :Description="elem.description"
@@ -118,6 +138,7 @@
             <div class="row flex-wrap">
                 <SingleWatched
                 v-for="(elem, i) in store.listWatched"
+                :key="i"
                 :Image="elem.img"
                 :Title="elem.title"
                 :Subtitle="elem.subtitle"/>
@@ -129,8 +150,24 @@
         <Statics/>
     </section>
 
-    <section>
-        
+    <section class="team">
+        <div class="container text-center">
+            <h6>
+               the pericuros
+            </h6>
+            <h2>
+                meet the team
+            </h2>
+            <div class="row flex-wrap">
+                <SingleTeam
+                v-for="(elem, i) in listTeam"
+                :key="i"
+                :Image="elem.img"
+                :Title="elem.title"
+                :Subtitle="elem.subtitle"
+                />
+            </div>
+        </div>
     </section>
 
 </template>
@@ -139,6 +176,7 @@
    .our-work{
     padding: 40px 0;
     margin-top: 40px;
+    margin-bottom: 40px;
     
     .container{
         h6,h2{
@@ -215,6 +253,29 @@
    .watchlist{
     padding: 40px 0;
     margin-top: 40px;
+    margin-bottom: 40px;
+
+    >div{
+        h6,h2{
+            text-transform: uppercase;
+        }
+        h2{
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+        > div{
+
+         margin-top: 40px;
+
+        }
+    }
+   }
+
+   .team{
+    padding: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
     >div{
         h6,h2{
             text-transform: uppercase;
