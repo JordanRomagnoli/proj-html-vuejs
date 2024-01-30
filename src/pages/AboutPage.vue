@@ -21,6 +21,28 @@ export default {
                     title: 'the most beautifull thing',
                     subtitle: 'Music Video'
                 }
+            ],
+            teamUser: [
+                {
+                    img: '../assets/img/Team-01.jpg',
+                    name: 'FABRICIO GUERRA',
+                    role: 'Main Director'
+                },
+                {
+                    img: '../assets/img/Team-02.jpg',
+                    name: 'UMBERTO PAGODA',
+                    role: 'Main Writer'
+                },
+                {
+                    img: '../assets/img/Team-03.jpg',
+                    name: 'GLORIA RICCASSO',
+                    role: 'Main Producer'
+                },
+                {
+                    img: '../assets/img/Team-04.jpg',
+                    name: 'LIO NAPOIN',
+                    role: 'Cameraman'
+                }
             ]
         }
     },
@@ -108,6 +130,39 @@ export default {
             </div>
         </section>
 
+        <section class="meet-the-team">
+            <div class="container">
+
+                <div class="text-center">
+                    <h6 class="text-uppercase mb-4">
+                        the pericuros
+                    </h6>
+
+                    <h2 class="text-uppercase fw-bold mb-4">
+                        meet the team
+                    </h2>
+
+                    <div class="d-flex">
+
+                        <div class="user p-2" v-for="(elem, i) in teamUser">
+                            <div class="img-user w-100">
+                                <img class="w-100" :src="getImagePath(elem.img)" alt="">
+                            </div>
+
+                            <h5 class="fw-bold mt-4">
+                                {{ elem.name }}
+                            </h5>
+
+                            <h6 class="text-body-secondary">
+                                {{ elem.role }}
+                            </h6>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 </template>
 
@@ -189,6 +244,26 @@ export default {
                 }
             }
 
+        }
+    }
+
+    .meet-the-team {
+        padding: 100px 0;
+
+        .user {
+            width: calc(100% / 4);
+
+            .img-user {
+                overflow: hidden;
+
+                img {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
     }
 }
