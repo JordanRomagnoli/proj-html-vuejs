@@ -5,27 +5,22 @@ import 'swiper/swiper-bundle.css';
 export default {
   data() {
     return {
-      firstQuote: [
+        counterSlide: 0,
+        quotes: [
         {
-          quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id. Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
+          quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
           src: '01.jpg',
           name: 'John Doe',
           role: 'Designer',
-        }
-      ],
-
-      secondQuote: [
+        },
         {
-          quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id. Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
+          quote: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
           src: '02.jpg',
           name: 'John Doe',
           role: 'Designer',
-        }
-      ],
-
-      thirdQuote: [
+        },
         {
-          quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id. Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
+          quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
           src: '03.jpg',
           name: 'John Doe',
           role: 'Designer',
@@ -39,84 +34,79 @@ export default {
       return new URL(imgPath, import.meta.url).href;
     },
 
-    initSwiper() {
-      this.swiper = new Swiper('.swiper-container', {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
+    firstButton(){
+        this.counterSlide = 0;
     },
+
+    secondButton(){
+        this.counterSlide = 1;
+    },
+
+    thirdButton(){
+        this.counterSlide = 2;
+    },
+
+    autoPlay(){
+        const timeout = setInterval(()=>{
+            if(this.counterSlide < 3){
+                
+                this.counterSlide ++;
+        
+            }else{
+                this.counterSlide = 0;
+            }
+        }, 3000)
+    }
   },
-  mounted() {
-    this.initSwiper();
-  },
+  mounted(){
+    this.autoPlay()
+  }
 };
 </script>
 
 <template>
     <div class="background">
         <div class="container">
-                <div>
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-            <div class="frame">
-                <div class="swiper-container">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div class="icon-frame">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="slide">
+                <div class="quote">
                     <div>
-                    {{ firstQuote[0].quote }}
+                        {{ quotes[counterSlide].quote }}
                     </div>
-                    <div class="info">
-                        <div class="icon-frame">
-                            <img :src="getImagePath('assets/img/' + firstQuote[0].src)" alt="">
-                        </div>
-                        <div>
-                        <h4>{{ thirdQuote[0].name }}</h4>
-                        <span>{{ thirdQuote[0].role }}</span>
+                    <div>
+                        {{ quotes[counterSlide].quote }}
                     </div>
+                    <div>
+                        {{ quotes[counterSlide].quote }}
                     </div>
                 </div>
-
-                <div class="swiper-slide">
+                
+                <div class="info-box">
+                    <div class="image-frame">
+                        <img :src="getImagePath('../assets/img/'+quotes[counterSlide].src)" :alt="quotes[counterSlide].name">
+                    </div>
                     <div>
-                    {{ secondQuote[0].quote }}
-                    </div>
-                    <div class="info">
-                        <div class="icon-frame">
-                            <img :src="getImagePath('assets/img/'+secondQuote[0].src)" alt="">
-                        </div>
-                        <div>
-                        <h4>{{ thirdQuote[0].name }}</h4>
-                        <span>{{ thirdQuote[0].role }}</span>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div>
-                    {{ thirdQuote[0].quote }}
-                    </div>
-                    <div class="info">
-                        <div class="icon-frame">
-                            <img :src="getImagePath('assets/img/' + thirdQuote[0].src)" alt="">
-                        </div>
-                        <div>
-                        <h4>{{ thirdQuote[0].name }}</h4>
-                        <span>{{ thirdQuote[0].role }}</span>
-                    </div>
+                        <h4>
+                            {{ quotes[counterSlide].name }}
+                        </h4>
+                        <span>{{ quotes[counterSlide].role }}</span>
                     </div>
                 </div>
             </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-                </div>
-
+            <div class="dot">
+                <span @click="firstButton()">
+                    <i class="fa-solid fa-circle"></i>
+                </span>
+                <span @click="secondButton()">
+                    <i class="fa-solid fa-circle"></i>
+                </span>
+                <span @click="thirdButton()">
+                    <i class="fa-solid fa-circle"></i>
+                </span>
             </div>
-            
         </div>
-
     </div>
 </template>
 
@@ -126,33 +116,56 @@ export default {
 .background{
     background-image: url(../assets/img/Parallax-02.jpg);
     background-attachment: fixed;
-}
-.container{
+    padding: 60px 0;
+    .container{
     overflow: hidden;
-    .frame{
-        height: 400px;
+    .icon-frame{
+        margin: 0 auto;
+        width: 10%;
+        text-align: center;
+        margin-bottom: 30px;
+        i{
+            font-size: 4rem;
+            color: white;
+        }
+    }
+    .slide{
+        color: white;
+        text-align: center;
+        margin-bottom: 60px;
+        .quote{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .info-box{
+            display: flex;
+            justify-content: center;
+            .image-frame{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .dot{
         display: flex;
-        align-items: center;
+        justify-content: center;
+        color: white;
+        span{
+            font-size: small;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
     }
 }
 
-.icon-frame{
-    width: 80px;
-    height: 80px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.info{
-    display: flex;
-    justify-content: center;
-}
-.swiper-container {
-  width: 100%;
-  .swiper-slide{
-    text-align: center;
-    color: white;
-  }
-}
 </style>
