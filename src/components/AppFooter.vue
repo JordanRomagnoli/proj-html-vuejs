@@ -2,7 +2,20 @@
 export default {
     data() {
         return {
-
+            datasInformation: [
+                'Product Support',
+                'Checkout',
+                'Report Abuse',
+                'Redeem Voucher',
+                'Order Status'
+            ],
+            datasUsefulLinks: [
+                'Policies & Rules',
+                'Privacy Policy',
+                'License Policy',
+                'My account',
+                'Locality'
+            ]
         }
     },
 }
@@ -10,7 +23,7 @@ export default {
 
 <template>
     <footer>
-        <div class="container-80">
+        <div class="container">
 
             <div class="footer-top d-flex">
                 <div class="col-footer py-3">
@@ -60,24 +73,8 @@ export default {
 
                     <br>
 
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Product Support</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Checkout</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Report Abuse</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Redeem Voucher</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Order Status</a>
+                    <div class="fs-5 mb-2" v-for="(elem, i) in datasInformation">
+                        <a class="fs-5" href="">{{ elem }}</a>
                     </div>
                 </div>
 
@@ -86,24 +83,10 @@ export default {
 
                     <br>
 
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Policies & Rules</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Privacy Policy</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">License Policy</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">My Account</a>
-                    </div>
-
-                    <div class="fs-5 mb-2">
-                        <a class="fs-5" href="">Locality</a>
+                    <div class="fs-5 mb-2" v-for="(elem, i) in datasUsefulLinks">
+                        <a class="fs-5" href="">
+                            {{ elem }}
+                        </a>
                     </div>
                 </div>
 
