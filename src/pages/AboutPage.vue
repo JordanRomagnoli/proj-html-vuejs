@@ -21,6 +21,28 @@ export default {
                     title: 'the most beautifull thing',
                     subtitle: 'Music Video'
                 }
+            ],
+            teamUser: [
+                {
+                    img: '../assets/img/Team-01.jpg',
+                    name: 'FABRICIO GUERRA',
+                    role: 'Main Director'
+                },
+                {
+                    img: '../assets/img/Team-02.jpg',
+                    name: 'UMBERTO PAGODA',
+                    role: 'Main Writer'
+                },
+                {
+                    img: '../assets/img/Team-03.jpg',
+                    name: 'GLORIA RICCASSO',
+                    role: 'Main Producer'
+                },
+                {
+                    img: '../assets/img/Team-04.jpg',
+                    name: 'LIO NAPOIN',
+                    role: 'Cameraman'
+                }
             ]
         }
     },
@@ -81,6 +103,66 @@ export default {
 
         </section>
 
+        <section class="about-us">
+            <div class="container">
+
+                <div>
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        about us
+                    </h6>
+
+                    <h2 class="text-uppercase fw-bold mb-4">
+                        high quality cinematics
+                    </h2>
+
+                    <p class="mb-5">
+                        Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus mus. Nulla
+                        A nisi ut mi efficitur hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus
+                        sem sed. phasellus sed eli molestie, porttitor ligula of the egestas, mattis augue. quisque et
+                        rhoncus justo. suspendisse luctus pharetra eleme tcondimentum.
+                    </p>
+
+                    <button type="button" class="text-uppercase py-3 px-5 fs-5 bg-light">
+                        read more
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="meet-the-team">
+            <div class="container">
+
+                <div class="text-center">
+                    <h6 class="text-uppercase mb-4">
+                        the pericuros
+                    </h6>
+
+                    <h2 class="text-uppercase fw-bold mb-4">
+                        meet the team
+                    </h2>
+
+                    <div class="d-flex">
+
+                        <div class="user p-2" v-for="(elem, i) in teamUser">
+                            <div class="img-user w-100">
+                                <img class="w-100" :src="getImagePath(elem.img)" alt="">
+                            </div>
+
+                            <h5 class="fw-bold mt-4">
+                                {{ elem.name }}
+                            </h5>
+
+                            <h6 class="text-body-secondary">
+                                {{ elem.role }}
+                            </h6>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 </template>
 
@@ -132,6 +214,57 @@ export default {
             }
         }
 
+    }
+
+    .about-us {
+        background-image: url('../assets/img/About-Us.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            color: white;
+
+            div:first-of-type {
+                width: 50%;
+                margin-left: auto;
+
+                p {
+                    line-height: 35px;
+                }
+
+                button {
+                    transition: color 0.5s;
+                    color: white;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .meet-the-team {
+        padding: 100px 0;
+
+        .user {
+            width: calc(100% / 4);
+
+            .img-user {
+                overflow: hidden;
+
+                img {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
     }
 }
 </style>
