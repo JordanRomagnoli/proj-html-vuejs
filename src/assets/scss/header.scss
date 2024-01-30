@@ -80,6 +80,16 @@ header {
                     padding: 15px;
                 }
             }
+
+            .search-button {
+                background-color: white;
+            }
+
+            .offcanvas,
+            .bg-special {
+                background-color: black;
+                opacity: 0.8;
+            }
         }
     }
 }

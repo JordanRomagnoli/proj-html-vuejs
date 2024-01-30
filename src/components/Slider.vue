@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            interval: null,
             iconsSlider: [
                 '../assets/img/01.png',
                 '../assets/img/02.png',
@@ -47,7 +48,7 @@ export default {
         display: flex;
         justify-content: space-around;
 
-        >div:first-of-type {
+        >div {
             width: calc(100% / 5);
         }
     }

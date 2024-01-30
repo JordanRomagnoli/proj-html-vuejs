@@ -150,10 +150,38 @@ export default {
             </div>
 
             <div class="box-links d-flex justify-content-end">
+
                 <div class="border-end border-dark">
-                    <a href="">
-                        <i class="fa-solid fa-magnifying-glass" style="color: black;"></i>
-                    </a>
+
+                    <button class="search-button border-0 pe-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <i class="fa-solid fa-magnifying-glass fs-4" style="color: #000000;"></i>
+                    </button>
+
+                    <div class="offcanvas  offcanvas-start w-100" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Chiudi">
+                                <i class="fa-solid fa-xmark fs-3" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+
+                        <div class="offcanvas-body d-flex justify-content-center align-items-center">
+
+                            <form class="d-flex border border-light p-4 w-50">
+                                <input class="form-control bg-special border-0 text-light rounded-0" type="search"
+                                    placeholder="search" aria-label="Search">
+                                <button class="bg-special border-0" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass fs-4" style="color: white;"></i>
+                                </button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div>
