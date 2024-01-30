@@ -1,10 +1,13 @@
 <script>
+    import { store } from '../store';
     import JumbotronCarusell from '../components/JumbotronCarusell.vue';
+    import SingleWatched from '../components/SingleWatched.vue';
     import SingleWork from '../components/SingleWork.vue';
 
     export default {
         data() {
             return { 
+                store,
                 listWork:[
                     {
                         img: 'image (14).svg',
@@ -36,13 +39,15 @@
                         title: 'versitile actors',
                         description: 'Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.'
                     },
-                ]
+                ],
+                
             }
         },
         components :{
 
             JumbotronCarusell,
             SingleWork,
+            SingleWatched,
         },
         methods: {
             
@@ -95,6 +100,24 @@
         </div>
     </section>
 
+    <section class="watchlist">
+        <div class="container text-center">
+            <h6>
+                your watchlist
+            </h6>
+            <h2>
+                best hits movies
+            </h2>
+            <div class="row flex-wrap">
+                <SingleWatched
+                v-for="(elem, i) in store.listWatched"
+                :Image="elem.img"
+                :Title="elem.title"
+                :Subtitle="elem.subtitle"/>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <style lang="scss" scoped>
@@ -111,7 +134,7 @@
         }
         >h2{
             font-size: 2.8rem;
-            font-weight: bold;
+            font-weight: 700;
         }
         > div{
             margin-top: 40px;
@@ -130,7 +153,7 @@
         .row{
             justify-content: flex-end;
             align-items: center;
-            min-height: 500px;
+            min-height: 550px;
                 .col-6{
                     color: white;
 
@@ -170,6 +193,25 @@
                         }
                     }
                 }
+        }
+    }
+   }
+
+   .watchlist{
+    padding: 40px 0;
+    margin-top: 40px;
+    >div{
+        h6,h2{
+            text-transform: uppercase;
+        }
+        h2{
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+        > div{
+
+         margin-top: 40px;
+
         }
     }
    }
