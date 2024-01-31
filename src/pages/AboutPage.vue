@@ -1,5 +1,6 @@
 <script>
 import { store } from '../store';
+import IconCarousell from '../components/IconCarousell.vue';
 
 export default {
     data() {
@@ -47,7 +48,7 @@ export default {
         }
     },
     components: {
-
+        IconCarousell
     },
     methods: {
         getImagePath: function (imgPath) {
@@ -165,6 +166,10 @@ export default {
                 </div>
 
             </div>
+        </section>
+
+        <section class="icon-swiper">
+            <IconCarousell />
         </section>
     </div>
 </template>
