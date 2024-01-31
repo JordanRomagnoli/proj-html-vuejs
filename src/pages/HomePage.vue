@@ -188,6 +188,54 @@
         <IconCarousell/>
     </section>
 
+    <section class="form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h6>
+                        collaborate
+                    </h6>
+                    <h2>
+                        want to work with us?
+                    </h2>
+                    <h2>
+                        leave us a message!
+                    </h2>
+                    <p class=" m-0 ">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam ipsa expedita unde, quidem libero a tenetur nesciunt ipsam laudantium, voluptatibus autem voluptates eos itaque, aliquam alias odio aspernatur veritatis quia quos repellat pariatur! Autem, saepe.
+                    </p>
+                </div>
+                <div class="col-6 form-col">
+                    <form class="row" id="myForm">
+                    <div class="col-6">
+                        
+                        <input type="text" id="name" name="user-name" required placeholder="Your Name">
+                    </div>
+                    <div class="col-6">
+                        
+                        <input type="email" id="email" name="user-email" required placeholder="Your Email">
+                    </div>
+                    <div class="col-6">
+                        
+                        <input type="number" id="age" name="user-age" required placeholder="Mobile Number">
+                    </div>
+                    <div class="col-6">
+                        
+                        <input type="password" id="password" name="user-password" required placeholder="Your Pincode">
+                    </div>
+                    <div class="col-12">
+                        
+                        <textarea id="message" name="user-message" cols="70" rows="10" required placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div class="col-12 mt-3">   
+                        <input type="submit" value="Submit" class="big-submit">
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <style lang="scss" scoped>
@@ -306,6 +354,48 @@
 
          margin-top: 40px;
 
+        }
+    }
+   }
+
+   .form-section{
+    .container{
+        padding: 60px 0;
+        .row{
+            min-height: 300px;
+
+            h6,h2{
+                text-transform: uppercase;
+            }
+            h2{
+                font-size: 2.8rem;
+                font-weight: 700;
+            }
+            p{
+                padding-top: 40px;
+                color: gray;
+            }
+            input{
+                margin-bottom: 20px;
+            }
+
+            .form-col{
+                .col-6,.col-12{
+                    text-align: center;
+                }
+                input,textarea{
+                    padding: 15px;
+                    background-color: #f2f2f2;
+                    border: none;
+                    width: 100%;
+                    font-weight: bolder;
+                }
+                .big-submit{
+                    width: 100%;
+                    color: white;
+                    background-color: black;
+                }
+            }
         }
     }
    }
