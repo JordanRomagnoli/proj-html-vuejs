@@ -61,9 +61,11 @@ export default {
 </script>
 
 <template id="top">
-    <BtnGoUp />
+    <BtnGoUp 
+    :Anchor="'#top'"
+    />
 
-    <div class="container-about_page">
+    <div class="container-about_page" id="top">
         <section class="jumbotron-about text-light">
             <h1 class="fw-bold mb-3">ABOUT</h1>
 
