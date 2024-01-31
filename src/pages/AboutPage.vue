@@ -1,6 +1,7 @@
 <script>
 import { store } from '../store';
 import IconCarousell from '../components/IconCarousell.vue';
+import BtnGoUp from '../components/BtnGoUp.vue';
 
 export default {
     data() {
@@ -48,7 +49,8 @@ export default {
         }
     },
     components: {
-        IconCarousell
+        IconCarousell,
+        BtnGoUp
     },
     methods: {
         getImagePath: function (imgPath) {
@@ -58,9 +60,10 @@ export default {
 }
 </script>
 
-<template>
-    <div class="container-about_page">
+<template id="top">
+    <BtnGoUp />
 
+    <div class="container-about_page">
         <section class="jumbotron-about text-light">
             <h1 class="fw-bold mb-3">ABOUT</h1>
 
