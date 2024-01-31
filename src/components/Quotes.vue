@@ -1,11 +1,16 @@
 <script>
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import 'swiper/css/pagination';
+import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 
 export default {
   data() {
     return {
-        counterSlide: 0,
         quotes: [
         {
           quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
@@ -34,21 +39,16 @@ export default {
       return new URL(imgPath, import.meta.url).href;
     },
 
-    firstButton(){
-        this.counterSlide = 0;
-    },
-
-    secondButton(){
-        this.counterSlide = 1;
-    },
-
-    thirdButton(){
-        this.counterSlide = 2;
-    },
-
   },
-  created(){
-  }
+components: {
+    Swiper,
+    SwiperSlide,
+    },
+setup() {
+    return {
+    modules: [Keyboard, Pagination, Navigation],
+    };
+},
 };
 </script>
 
@@ -58,42 +58,39 @@ export default {
             <div class="icon-frame">
                 <img src="../assets/img/image(20).svg" alt="">
             </div>
-            <div class="slide">
-                <div class="quote">
-                    <div>
-                        {{ quotes[counterSlide].quote }}
+            <swiper
+                :slidesPerView="1"
+                :spaceBetween="30"
+                :keyboard="{
+                enabled: true,
+                }"
+                :pagination="{
+                clickable: true,
+                }"
+                :navigation="true"
+                :modules="modules"
+                class="mySwiper"
+            >
+                <swiper-slide v-for="(elem, i) in quotes">
+                    <div class="quote-container">
+                        <p>
+                            {{ elem.quote }}
+                        </p>
+                        <div class="info-box">
+                            <div class="image-frame">
+                                <img :src="getImagePath('../assets/img/' + elem.src)" alt="">
+                            </div>
+                            <div class="profile">
+                                <h4>
+                                    {{ elem.name }}
+                                </h4>
+                                <span>{{ elem.role }}</span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        {{ quotes[counterSlide].quote }}
-                    </div>
-                    <div>
-                        {{ quotes[counterSlide].quote }}
-                    </div>
-                </div>
+                </swiper-slide>
                 
-                <div class="info-box">
-                    <div class="image-frame">
-                        <img :src="getImagePath('../assets/img/'+quotes[counterSlide].src)" :alt="quotes[counterSlide].name">
-                    </div>
-                    <div>
-                        <h4>
-                            {{ quotes[counterSlide].name }}
-                        </h4>
-                        <span>{{ quotes[counterSlide].role }}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="dot">
-                <span @click="firstButton()">
-                    <i class="fa-solid fa-circle"></i>
-                </span>
-                <span @click="secondButton()">
-                    <i class="fa-solid fa-circle"></i>
-                </span>
-                <span @click="thirdButton()">
-                    <i class="fa-solid fa-circle"></i>
-                </span>
-            </div>
+            </swiper>
         </div>
     </div>
 </template>
@@ -117,9 +114,10 @@ export default {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            z-index: 0;
         }
     }
-    .slide{
+    .quote-container{
         color: white;
         text-align: center;
         margin-bottom: 60px;
@@ -143,16 +141,9 @@ export default {
                     object-fit: cover;
                 }
             }
-        }
-    }
-    .dot{
-        display: flex;
-        justify-content: center;
-        color: white;
-        span{
-            font-size: small;
-            margin: 0 10px;
-            cursor: pointer;
+            .profile{
+                text-align: start;
+            }
         }
     }
     }

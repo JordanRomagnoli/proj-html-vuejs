@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 
-import { Pagination } from 'swiper/modules';
+import { Autoplay, } from 'swiper/modules';
 
 export default {
     data() {
@@ -45,8 +45,10 @@ export default {
         SwiperSlide,
     },
     setup() {
+
         return {
-            modules: [Pagination],
+            
+            modules: [Autoplay,],
         };
     },
 }
@@ -55,7 +57,7 @@ export default {
 <template>
     <div class="background">
         <div class=" container ">
-            <swiper :slidesPerView="5" :spaceBetween="50" :loop="true" :modules="modules" class="mySwiper">
+            <swiper :slidesPerView="5" :spaceBetween="50" :loop="true" :modules="modules" class="mySwiper" :autoplay="{delay: 2500,disableOnInteraction: false,}">
                 <swiper-slide v-for="(elem, i) in iconsList" :key="i">
 
                     <div class="icon-frame">
