@@ -1,6 +1,5 @@
 <script>
 import { store } from '../store';
-import Slider from '../components/Slider.vue';
 
 export default {
     data() {
@@ -48,7 +47,7 @@ export default {
         }
     },
     components: {
-        Slider
+
     },
     methods: {
         getImagePath: function (imgPath) {
