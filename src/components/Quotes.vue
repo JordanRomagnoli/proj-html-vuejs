@@ -26,7 +26,7 @@ export default {
           role: 'Designer',
         }
       ],
-      swiper: null,
+      
     };
   },
   methods: {
@@ -46,20 +46,8 @@ export default {
         this.counterSlide = 2;
     },
 
-    autoPlay(){
-        const timeout = setInterval(()=>{
-            if(this.counterSlide < 3){
-                
-                this.counterSlide ++;
-        
-            }else{
-                this.counterSlide = 0;
-            }
-        }, 3000)
-    }
   },
-  mounted(){
-    this.autoPlay()
+  created(){
   }
 };
 </script>

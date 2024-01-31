@@ -6,6 +6,7 @@
     import Statics from '../components/Statics.vue';
     import SingleTeam from '../components/SingleTeam.vue';
     import Quotes from '../components/Quotes.vue';
+    import CardCarousell from '../components/CardCarousell.vue';
 
     export default {
         data() {
@@ -76,6 +77,7 @@
             Statics,
             SingleTeam,
             Quotes,
+            CardCarousell,
         },
         methods: {
             
@@ -174,6 +176,10 @@
 
     <section>
         <Quotes/>
+    </section>
+
+    <section>
+        <CardCarousell/>
     </section>
 
 </template>
