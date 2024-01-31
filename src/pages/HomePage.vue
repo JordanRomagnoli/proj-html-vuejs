@@ -8,6 +8,7 @@
     import Quotes from '../components/Quotes.vue';
     import CardCarousell from '../components/CardCarousell.vue';
     import IconCarousell from '../components/IconCarousell.vue';
+    import BtnGoUp from '../components/BtnGoUp.vue';
 
     export default {
         data() {
@@ -80,6 +81,7 @@
             Quotes,
             CardCarousell,
             IconCarousell,
+            BtnGoUp,
         },
         methods: {
             
@@ -88,6 +90,8 @@
     </script>
 
 <template>
+    <BtnGoUp
+    :Anchor="'#top'"/>
     <JumbotronCarusell/>
     <section class="our-work">
         <div class="container text-center">
@@ -360,9 +364,8 @@
 
    .form-section{
     .container{
-        padding: 60px 0;
+        padding: 80px 0;
         .row{
-            min-height: 300px;
 
             h6,h2{
                 text-transform: uppercase;

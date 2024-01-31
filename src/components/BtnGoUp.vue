@@ -2,15 +2,19 @@
 export default {
     data() {
         return {
+
         }
+    },
+    props:{
+        Anchor: String,
     }
 }
 </script>
 
 <template>
     <div class="go-up">
-        <a class="go-up-btn border border-dark" href="#top">
-            <i class="fa-solid fa-angle-up" style="color: #000000;"></i>
+        <a class="go-up-btn" :href="Anchor">
+            <i class="fa-solid fa-angle-up"></i>
         </a>
     </div>
 </template>
@@ -30,6 +34,8 @@ export default {
         height: 40px;
         text-align: center;
         line-height: 40px;
+        border: 2px solid gray;
+        color: gray;
     }
 }
 </style>

@@ -44,7 +44,7 @@
     </script>
 
 <template>
-    <div class="jumbotron" :class="{
+    <div class="jumbotron" id="top" :class="{
         'active-1': counterJumbotron == 0,
         'active-2': counterJumbotron == 1,
     }">
