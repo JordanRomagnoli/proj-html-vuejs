@@ -158,7 +158,7 @@
                 object-position: center;
                 transition: all .3s ease-in-out;
                 &:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }
         }

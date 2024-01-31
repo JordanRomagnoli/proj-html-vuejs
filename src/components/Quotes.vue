@@ -56,7 +56,7 @@ export default {
     <div class="background">
         <div class="container">
             <div class="icon-frame">
-                <i class="fa-solid fa-quote-left"></i>
+                <img src="../assets/img/image(20).svg" alt="">
             </div>
             <div class="slide">
                 <div class="quote">
@@ -109,12 +109,14 @@ export default {
     overflow: hidden;
     .icon-frame{
         margin: 0 auto;
-        width: 10%;
+        width: 100px;
+        height: 100px;
         text-align: center;
         margin-bottom: 30px;
-        i{
-            font-size: 4rem;
-            color: white;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
     .slide{

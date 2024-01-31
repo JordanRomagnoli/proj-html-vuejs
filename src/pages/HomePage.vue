@@ -7,6 +7,7 @@
     import SingleTeam from '../components/SingleTeam.vue';
     import Quotes from '../components/Quotes.vue';
     import CardCarousell from '../components/CardCarousell.vue';
+    import IconCarousell from '../components/IconCarousell.vue';
 
     export default {
         data() {
@@ -78,6 +79,7 @@
             SingleTeam,
             Quotes,
             CardCarousell,
+            IconCarousell,
         },
         methods: {
             
@@ -180,6 +182,10 @@
 
     <section>
         <CardCarousell/>
+    </section>
+
+    <section>
+        <IconCarousell/>
     </section>
 
 </template>
