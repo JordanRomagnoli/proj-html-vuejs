@@ -39,6 +39,21 @@
                     this.counterJumbotron = this.jumbotronCarousellElement.length - 1 ;
                 }
             },
+
+            autoPlay(){
+                setInterval(() => {
+                    if(this.counterJumbotron < this.jumbotronCarousellElement.length - 1){
+                
+                    this.counterJumbotron ++;
+            
+                    }else{
+                        this.counterJumbotron = 0;
+                    }
+                }, 3000);
+            }
+        },
+        mounted(){
+            this.autoPlay();
         }
     }
     </script>
@@ -106,6 +121,7 @@
                                 background-color: rgba(0, 0, 0, 0.5);
                                 border: none;
                                 color: white;
+                                
                             }
                         }
                         .col-10{
@@ -132,7 +148,6 @@
                 }
         }
     }
-
     .active-1{
         background-image: url(../assets/img/blog01.jpg);
     }

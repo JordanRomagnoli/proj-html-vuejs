@@ -149,4 +149,7 @@ setup() {
     }
 }
 
+.mySwiper :deep(.swiper-pagination-bullet) {
+        background-color: white;
+}
 </style>
