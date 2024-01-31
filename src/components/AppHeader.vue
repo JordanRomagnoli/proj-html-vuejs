@@ -161,7 +161,7 @@ export default {
                     <div class="offcanvas  offcanvas-start w-100" tabindex="-1" id="offcanvasExample"
                         aria-labelledby="offcanvasExampleLabel">
 
-                        <div class="offcanvas-header">
+                        <div class=" offcanvas-header">
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Chiudi">
                                 <i class="fa-solid fa-xmark fs-3" style="color: #ffffff;"></i>

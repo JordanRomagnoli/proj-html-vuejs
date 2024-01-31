@@ -166,8 +166,6 @@ export default {
 
             </div>
         </section>
-
-        <Slider />
     </div>
 </template>
 
