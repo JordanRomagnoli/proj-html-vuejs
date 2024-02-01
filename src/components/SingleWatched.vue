@@ -33,7 +33,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/scss/partials/variables' as *;
+    @use '../assets/scss/partials/mixins' as *;
 
     .single-card{
         width: calc(100% / 3);
@@ -47,11 +47,7 @@
             margin-bottom: 20px;
 
             img{
-                width: 100%;
-                transition: all .4s ease-in-out;
-                &:hover{
-                    transform: scale(1.1);
-                }
+                @include img-transition;
             }
         }
         > h4{

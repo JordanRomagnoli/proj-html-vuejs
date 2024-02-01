@@ -33,7 +33,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/scss/partials/variables' as *;
+    @use '../assets/scss/partials/mixins' as *;
 
     img{
         color: black;
@@ -54,8 +54,7 @@
             }
 
             img{
-                width: 100%;
-                height: 100%;
+                @include img-frame;
                 object-fit: contain;
             }
         }

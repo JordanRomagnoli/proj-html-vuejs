@@ -29,7 +29,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/scss/partials/variables' as *;
+    @use '../assets/scss/partials/mixins' as *;
 
     .singleCard{
         width: calc(100% / 4);
@@ -40,14 +40,9 @@
             overflow: hidden;
             margin-bottom: 20px;
             img{
-                width: 100%;
-                height: 100%;
+                @include img-frame;
                 object-fit: cover;
-                object-position: center;
-                transition: all .3s ease-in-out;
-                &:hover{
-                    transform: scale(1.05);
-                }
+                @include img-transition;
             }
         }
         > h4{

@@ -64,11 +64,10 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/scss/partials/variables' as *;
+    @use '../assets/scss/partials/mixins' as *;
 
     .background{
-        background-image: url('../assets/img/Parallax-01.jpg');
-        background-attachment: fixed;
+        @include background-cover('../assets/img/Parallax-01.jpg');
         .row{
             min-height: 300px;
             align-items: center;

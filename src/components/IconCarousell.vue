@@ -70,12 +70,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/mixins' as *;
+
 
 .background {
-    background-image: url(../assets/img/Parallax-03.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    @include background-cover('../assets/img/Parallax-03.jpg');
 
     .container {
         padding: 120px 0;
@@ -96,9 +95,7 @@ export default {
 
 .swiper-slide {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 .icon-frame {
@@ -106,10 +103,8 @@ export default {
     height: 150px;
 
     img {
-        width: 100%;
-        height: 100%;
+        @include img-frame;
         object-fit: contain;
-        object-position: center;
     }
 }
 </style>

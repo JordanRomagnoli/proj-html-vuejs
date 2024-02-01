@@ -93,7 +93,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use '../assets/scss/partials/variables' as *;
+    @use '../assets/scss/partials/mixins' as *;
 
     .jumbotron{
         background-size: cover;
@@ -102,9 +102,7 @@
 
         > div{
             background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             min-height: 782px;
             padding: 20px;
 

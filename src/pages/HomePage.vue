@@ -243,10 +243,9 @@
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
    .our-work{
-    padding: 40px 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    @include section-space;
     
     .container{
         h6,h2{
@@ -256,8 +255,7 @@
             
         }
         >h2{
-            font-size: 2.8rem;
-            font-weight: 700;
+            @include font-heading;
         }
         > div{
             margin-top: 40px;
@@ -289,8 +287,7 @@
                         font-size: 0.8rem;
                     }
                     > h2{
-                        font-size: 2.2rem;
-                        font-weight: bold;
+                        @include font-subheading;
                     }
                     >p{
                         line-height: 40px;
@@ -321,17 +318,14 @@
    }
 
    .watchlist{
-    padding: 40px 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    @include section-space;
 
     >div{
         h6,h2{
             text-transform: uppercase;
         }
         h2{
-            font-size: 2.8rem;
-            font-weight: 700;
+            @include font-heading;
         }
         > div{
 
@@ -342,17 +336,14 @@
    }
 
    .team{
-    padding: 40px 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    @include section-space;
 
     >div{
         h6,h2{
             text-transform: uppercase;
         }
         h2{
-            font-size: 2.8rem;
-            font-weight: 700;
+            @include font-heading;
         }
         > div{
 
@@ -363,16 +354,17 @@
    }
 
    .form-section{
+    @include section-space;
     .container{
-        padding: 80px 0;
+        
         .row{
 
             h6,h2{
                 text-transform: uppercase;
             }
             h2{
-                font-size: 2.8rem;
-                font-weight: 700;
+                @include font-heading;
+
             }
             p{
                 padding-top: 40px;

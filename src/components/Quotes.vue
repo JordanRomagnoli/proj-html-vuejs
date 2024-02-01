@@ -88,7 +88,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/mixins' as *;
 
 .background {
     background-image: url(../assets/img/Parallax-02.jpg);
@@ -149,9 +149,7 @@ export default {
                     margin-right: 10px;
 
                     img {
-                        width: 100%;
-                        height: 100%;
-                        object-position: center;
+                        @include img-frame;
                         object-fit: cover;
                     }
                 }
