@@ -13,19 +13,19 @@ export default {
         return {
             quotes: [
                 {
-                    quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
+                    quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id. Lorem ipsum dolor sit amet consectetur lobortis mi dui, id.',
                     src: '01.jpg',
                     name: 'John Doe',
                     role: 'Designer',
                 },
                 {
-                    quote: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                    quote: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
                     src: '02.jpg',
                     name: 'John Doe',
                     role: 'Designer',
                 },
                 {
-                    quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id.',
+                    quote: 'Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id. Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
                     src: '03.jpg',
                     name: 'John Doe',
                     role: 'Designer',
@@ -132,9 +132,9 @@ export default {
             text-align: center;
             margin-bottom: 60px;
 
-            .quote {
-                margin-bottom: 20px;
-                text-align: center;
+            p {
+                margin-bottom: 40px;
+                word-wrap: break-word;
             }
 
             .info-box {

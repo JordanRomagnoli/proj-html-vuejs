@@ -14,31 +14,38 @@ export default {
             headerItems: [
                 {
                     path: "/",
-                    namePath: 'home'
+                    namePath: 'home',
+                    icon: false,
                 },
                 {
                     path: "/blogs",
-                    namePath: 'blogs'
+                    namePath: 'blogs',
+                    icon: false,
                 },
                 {
                     path: "/pages",
-                    namePath: 'pages'
+                    namePath: 'pages',
+                    icon: true,
                 },
                 {
                     path: "/about",
-                    namePath: 'about'
+                    namePath: 'about',
+                    icon: false,
                 },
                 {
                     path: "/contacts",
-                    namePath: 'contacts'
+                    namePath: 'contacts',
+                    icon: false,
                 },
                 {
                     path: "/gallery",
-                    namePath: 'gallery'
+                    namePath: 'gallery',
+                    icon: false,
                 },
                 {
                     path: "/shop",
-                    namePath: 'shop'
+                    namePath: 'shop',
+                    icon: true,
                 },
             ],
         }
@@ -63,7 +70,9 @@ export default {
 
                             <router-link :to="elem.path">
                                 {{ elem.namePath }}
-                                <i class="fa-solid fa-angle-down" style="color: black;"></i>
+                                <i class="fa-solid fa-angle-down" :class="{
+                                    'd-none': elem.icon == false,
+                                }" style="color: black;"></i>
                             </router-link>
 
                             <div class="dropdown-pages">
