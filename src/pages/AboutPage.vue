@@ -61,9 +61,7 @@ export default {
 </script>
 
 <template id="top">
-    <BtnGoUp 
-    :Anchor="'#top'"
-    />
+    <BtnGoUp :Anchor="'#top'" />
 
     <div class="container-about_page" id="top">
         <section class="jumbotron-about text-light">
@@ -180,19 +178,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+
 .container-about_page {
     padding-top: 95px;
 
     .jumbotron-about {
         height: 280px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         flex-direction: column;
         background-image: url('../assets/img/bredcum-img.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-
 
         h1 {
             font-size: 50px;
@@ -218,11 +215,7 @@ export default {
                 overflow: hidden;
 
                 img {
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+                    @include img-transition;
                 }
             }
         }
@@ -270,11 +263,7 @@ export default {
                 overflow: hidden;
 
                 img {
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+                    @include img-transition;
                 }
             }
         }
