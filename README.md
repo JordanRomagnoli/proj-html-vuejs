@@ -1,7 +1,18 @@
-# Vue 3 + Vite
+# Sito Vetrina Casa Cinematografica XYZ
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Questo progetto consiste nella creazione di un sito web vetrina per la Casa Cinematografica XYZ, un'azienda immaginaria che produce e distribuisce film. Il sito fornisce agli utenti una panoramica degli ultimi articoli e notizie aggiornate giornalmente.
 
-## Recommended IDE Setup
+## Descrizione
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Il sito è stato sviluppato utilizzando Vue.js e la libreria Swiper per creare carousel interattivi.
+
+## Stack Tecnologico
+
+- Vue.js: Framework JavaScript per la creazione di interfacce utente reattive.
+- Swiper: Libreria JavaScript per la creazione di carousel interattivi.
+
+## Contatti
+
+Per domande o feedback, non esitare a contattare [Nome del Team/Organizzazione].
+
+Grazie per l'interesse nel nostro progetto!
