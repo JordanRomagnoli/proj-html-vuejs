@@ -1,6 +1,6 @@
-# Sito Vetrina Casa Cinematografica XYZ
+# Sito Vetrina Casa Cinematografica
 
-Questo progetto consiste nella creazione di un sito web vetrina per la Casa Cinematografica XYZ, un'azienda immaginaria che produce e distribuisce film. Il sito fornisce agli utenti una panoramica degli ultimi articoli e notizie aggiornate giornalmente.
+Questo progetto consiste nella creazione di un sito web vetrina per la Casa Cinematografica 'Cinemato', un'azienda immaginaria che produce e distribuisce film. Il sito fornisce agli utenti una panoramica degli ultimi articoli e notizie aggiornate giornalmente.
 
 ## Descrizione
 
