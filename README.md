@@ -4,12 +4,13 @@ Questo progetto consiste nella creazione di un sito web vetrina per la Casa Cine
 
 ## Descrizione
 
-Il sito è stato sviluppato utilizzando Vue.js e la libreria Swiper per creare carousel interattivi.
+Il sito è stato sviluppato utilizzando Vue.js e la libreria Swiper per creare caroselli interattivi.
 
 ## Stack Tecnologico
 
-- Vue.js: Framework JavaScript per la creazione di interfacce utente reattive.
-- Swiper: Libreria JavaScript per la creazione di carousel interattivi.
+- Vue.js
+- Swiper
+- SCSS
 
 ## Contatti
 
